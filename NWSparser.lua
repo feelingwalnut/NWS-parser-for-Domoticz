@@ -49,5 +49,5 @@ end
 -- Update the devices in domoticz
 domoticz_updateDevice(wind_id,'',WB .. ";" .. WD .. ";" .. WS .. ";" .. WG .. ";" .. TP .. ";" .. WC)
 --domoticz_updateDevice(bar_id,'',BAR .. ";" .. BAR_FOR)
-domoticz_updateDevice(bar_id,'',BAR)
+domoticz_updateDevice(bar_id,'',BAR .. ";" .. 0)
 domoticz_updateDevice(rain_id,'',RAINRATE .. ";" .. (RAINCOUNTER * 4))
