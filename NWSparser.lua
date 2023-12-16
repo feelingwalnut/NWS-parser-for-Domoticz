@@ -24,7 +24,7 @@ local WG = domoticz_applyJsonPath(s,'.properties.windGust.value')
 local TP = domoticz_applyJsonPath(s,'.properties.temperature.value')
 local WC = domoticz_applyJsonPath(s,'.properties.windChill.value')
 local BAR = domoticz_applyJsonPath(s,'.properties.barometricPressure.value')
-local BAR_FOR = domoticz_applyJsonPath(s,'.properties.textDescription')
+--local BAR_FOR =
 local RAINRATE = domoticz_applyJsonPath(s,'.properties.precipitationLastHour.value')
 local RAINCOUNTER = domoticz_applyJsonPath(s,'.properties.precipitationLast6Hours.value')
 
@@ -48,6 +48,6 @@ end
 
 -- Update the devices in domoticz
 domoticz_updateDevice(wind_id,'',WB .. ";" .. WD .. ";" .. WS .. ";" .. WG .. ";" .. TP .. ";" .. WC)
---domoticz_updateDevice(wind_id,'',WB .. ";" .. WS .. ";" .. WG .. ";" .. TP .. ";" .. WC)
-domoticz_updateDevice(bar_id,'',BAR .. ";" .. BAR_FOR)
+--domoticz_updateDevice(bar_id,'',BAR .. ";" .. BAR_FOR)
+domoticz_updateDevice(bar_id,'',BAR)
 domoticz_updateDevice(rain_id,'',RAINRATE .. ";" .. (RAINCOUNTER * 4))
