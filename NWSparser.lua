@@ -47,7 +47,9 @@ if BAR == null then
 end
 
 -- Update the devices in domoticz
-domoticz_updateDevice(wind_id,'',WB .. ";" .. WD .. ";" .. WS .. ";" .. WG .. ";" .. TP .. ";" .. WC)
+--Domoticz expects windspeed in one form but we fetch it in another.
+domoticz_updateDevice(wind_id,'',WB .. ";" .. WD .. ";" .. (WS * 2.777777778) .. ";" .. (WG * 2.777777778) .. ";" .. TP .. ";" .. WC)
 --domoticz_updateDevice(bar_id,'',BAR .. ";" .. BAR_FOR)
 domoticz_updateDevice(bar_id,'',BAR .. ";" .. 0)
+-- Not entirely sure the 6 into 24hour (4x)multiplier will work for raincounter
 domoticz_updateDevice(rain_id,'',RAINRATE .. ";" .. (RAINCOUNTER * 4))
