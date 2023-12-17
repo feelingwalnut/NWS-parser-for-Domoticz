@@ -1,4 +1,4 @@
-this script is marginally functional at best for the moment.
+functional but does not use all available values from api source. use as framework, build to suit.
 
 domoticz settings, http/https poller
 method get
