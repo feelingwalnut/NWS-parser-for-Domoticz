@@ -38,8 +38,8 @@ if RAINCOUNTER == null then RAINCOUNTER = 0 end
 
 -- Check if BAR is not null and greater than four digits long
 if BAR ~= null and string.len(tostring(BAR)) > 4 then
-  -- Truncate the value to four digits
-  BAR = string.sub(tostring(BAR), 1, 4)
+  -- Truncate the value to first four digits
+  BAR = string.sub(tostring(BAR), 1, -5)
 end
 -- If BAR is still null, set it to 0
 if BAR == null then
