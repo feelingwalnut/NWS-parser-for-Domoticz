@@ -52,4 +52,4 @@ domoticz_updateDevice(wind_id,'',WB .. ";" .. WD .. ";" .. (WS * 2.777777778) ..
 --domoticz_updateDevice(bar_id,'',BAR .. ";" .. BAR_FOR)
 domoticz_updateDevice(bar_id,'',BAR .. ";" .. 0)
 -- Not entirely sure the 6 into 24hour (4x)multiplier will work for raincounter
-domoticz_updateDevice(rain_id,'',RAINRATE .. ";" .. (RAINCOUNTER * 4))
+domoticz_updateDevice(rain_id,'',RAINRATE .. ";" .. (RAINCOUNTER))
